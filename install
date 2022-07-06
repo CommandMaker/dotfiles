@@ -92,6 +92,8 @@ linkConfiguration () {
         fi
     done
 
+    xrdb ~/.Xresources
+
     echo -e "${GREEN}Configuration linked${RESET}"
 }
 
