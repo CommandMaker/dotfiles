@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This file is executed by LightDM before show login view
+# Set other scripts to start here
+# Set the .script extension for recognize them from the others
+
+/etc/scripts/display.script

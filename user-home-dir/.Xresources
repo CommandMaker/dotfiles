@@ -1,0 +1,66 @@
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+URxvt.font: xft:Jetbrains Mono:size=14, \
+	    xft:Font Awesome 6 Free:pixelsize=14:size=20, \
+	    xft:Bitstream Vera Sans Mono:pixelsize=14:size=20, \
+	    xft:Courier New:pixelsize=14:size=20, \
+	    xft:Andale Mono:pixelsize=14:size=20, \
+	    xft:FreeMono:pixelsize=14:size=20
+URxvt.print-pipe: "cat > /dev/null"
+
+URxvt*scrollBar: false
+urxvt*depth: 32
+URxvt*background: [70]#1e1e2e
+
+URxvt.perl-ext-common: default,vtwheel,xkr-clipboard,matcher
+
+URxvt.clipboard.autocopy: false
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Control-Insert: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.url-launcher: /usr/bin/brave
+URxvt.matcher.button: 1
+
+! COLORS
+!*background: #1E1E2E
+*foreground: #D9E0EE
+
+! Gray
+*color0: #6E6C7E
+*color8: #988BA2
+
+! Red
+*color1: #F28FAD
+*color9: #F28FAD
+
+! Green
+*color2: #ABE9B3
+*color10: #ABE9B3
+
+! Yellow
+*color3: #FAE3B0
+*color11:  #FAE3B0
+
+! Blue
+*color6: #96CDFB 
+*color14: #96CDFB
+!4
+!12
+
+! Maguve
+*color5: #DDB6F2
+*color13: #DDB6F2
+
+! Pink
+*color4: #F5C2E7
+*color12: #F5C2E7
+!6
+!14
+
+! Whites
+*color7: #C3BAC6
+*color15: #D9E0EE
+

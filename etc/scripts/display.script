@@ -1,0 +1,9 @@
+#!/bin/bash
+
+{ sleep 2;
+    xrandr --output VGA-1 --brightness 0.8;
+    xgamma -q -ggamma 0.9;
+    numlockx on;
+} &
+
+xmodmap /home/command_maker/.Xmodmap
