@@ -1,16 +1,18 @@
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
-URxvt.font: xft:Jetbrains Mono:size=14, \
-	    xft:Font Awesome 6 Free:pixelsize=14:size=20, \
-	    xft:Bitstream Vera Sans Mono:pixelsize=14:size=20, \
-	    xft:Courier New:pixelsize=14:size=20, \
-	    xft:Andale Mono:pixelsize=14:size=20, \
-	    xft:FreeMono:pixelsize=14:size=20
+URxvt.font: xft:JetBrains Mono:size=14, \
+            xft:Font Awesome 6 Free:pixelsize=14:size=20, \
+            xft:Dejavu Sans Mono:pixelsize=20:size=20:minspace=False, \
+            xft:Inconsolata Nerd Font Mono:pixelsize=20:size=20:minspace=False, \
+            xft:FreeMono:pixelsize=15:size=20:minspace=False, \
+            xft:Noto Emoji:minspace=False
 URxvt.print-pipe: "cat > /dev/null"
 
 URxvt*scrollBar: false
 urxvt*depth: 32
 URxvt*background: [70]#1e1e2e
+
+URxvt.letterSpace: 0
 
 URxvt.perl-ext-common: default,vtwheel,xkr-clipboard,matcher
 
