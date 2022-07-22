@@ -15,7 +15,10 @@ local Plug = vim.fn['plug#']
   -- Color scheme
 Plug('catppuccin/nvim', {as = 'catppuccin'})
 
+  -- Bottom bar
 Plug('nvim-lualine/lualine.nvim')
+
+  -- Icons
 Plug('kyazdani42/nvim-web-devicons')
 
   -- Keys remap
@@ -23,10 +26,15 @@ Plug('b0o/mapx.nvim')
 
   -- File explorer
 Plug('preservim/nerdtree')
+Plug('Xuyuanp/nerdtree-git-plugin')
+Plug('ryanoasis/vim-devicons')
 
   -- Line highlight
 Plug('miyakogi/conoline.vim')
 
+
+  -- Tab system
+Plug('akinsho/bufferline.nvim', { tag = 'v2.*' })
 vim.call('plug#end')
 
 
@@ -57,8 +65,6 @@ require('lualine').setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
-  extensions = {}
 }
 
 -- NerdTree config
@@ -75,6 +81,10 @@ require('mapx').setup{ global = 'force' }
 nnoremap('<F3>', ':let @/=""<cr><esc>', 'silent')
 nnoremap('<F6>', ':NERDTreeToggle<cr>')
 nnoremap('<F7>', ':NERDTreeFocus<cr>')
+
+-- Bufferline Config
+vim.opt.termguicolors = true
+require('bufferline').setup {}
 
 -- Color scheme
 require('catppuccin').setup {
