@@ -56,7 +56,7 @@ installPackages () {
 
 linkConfiguration () {
     echo -e "${TASK_ARROW} Linking configuration"
-    CONFIG_TO_LINK=("alacritty" "fish" "i3" "neofetch" "nvim" "picom" "polybar" "redshift" "rofi" "spicetify")
+    CONFIG_TO_LINK=("alacritty" "fish" "i3" "neofetch" "nvim" "picom" "polybar" "redshift" "rofi" "spicetify" "Kvantum")
 
     for e in ${CONFIG_TO_LINK[@]}; do
         if ! [ -h ~/.config/$e ]; then
@@ -148,9 +148,9 @@ start () {
     
     checkOrInstallYay
     installPackages
-    linkConfiguration
-    spotifyGPUPatch
-    tweakSpotify
+    # linkConfiguration
+    # spotifyGPUPatch
+    # tweakSpotify
 }
 
 start

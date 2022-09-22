@@ -67,6 +67,7 @@ bindsym $mod+c exec brave
 
 # Suspend
 bindsym $mod+Ctrl+Shift+L exec systemctl suspend
+bindsym XF86Close exec systemctl suspend
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -377,6 +378,8 @@ for_window [class="zoom"] floating enable
 for_window [title="Zoom Meeting"] floating enable
 for_window [title="Zoom Meeting"] move to workspace $ws4
 for_window [class="plank"] floating enable
+
+for_window [class="main.py"] floating enable
 
 #Compositor
 exec_always picom --experimental-backends

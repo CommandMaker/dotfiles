@@ -115,7 +115,7 @@ source /opt/asdf-vm/asdf.fish
 # PATH Variable
 set ANDROID_SDK_ROOT "/home/command_maker/Android/Sdk"
 
-set PATH "$HOME/bin:$HOME/.local/bin:(yarn global bin):$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH"
+set PATH "$HOME/bin:$HOME/.local/bin:(yarn global bin):$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$HOME/.config/composer/vendor/bin:$PATH"
 
 # Add transparency to XTerm window
 bash -c "[ -n \"$XTERM_VERSION\" ] && transset-df -a > /dev/null"

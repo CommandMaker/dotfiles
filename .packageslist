@@ -1,6 +1,6 @@
 neovim
 rofi
-polybar
+polybar-git
 rxvt-unicode
 lxappearance
 numlockx
@@ -9,3 +9,5 @@ spotify
 discord
 redshift
 nerd-fonts-complete
+kvantum
+vscodium
