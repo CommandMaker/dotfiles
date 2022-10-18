@@ -120,3 +120,8 @@ set PATH "$HOME/bin:$HOME/.local/bin:(yarn global bin):$ANDROID_SDK_ROOT/tools:$
 # Add transparency to XTerm window
 bash -c "[ -n \"$XTERM_VERSION\" ] && transset-df -a > /dev/null"
 fish_add_path /home/command_maker/.spicetify
+
+# pnpm
+set -gx PNPM_HOME "/home/command_maker/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end

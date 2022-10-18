@@ -6,6 +6,16 @@ vim.o.mouse = "a"
 vim.o.cursorline = true
 vim.o.swapfile = false
 vim.o.ignorecase = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+
+vim.api.nvim_exec([[
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+]], false)
 
 -- Plugins
 vim.call('plug#begin')
@@ -32,6 +42,11 @@ Plug('ryanoasis/vim-devicons')
   -- Line highlight
 Plug('miyakogi/conoline.vim')
 
+  -- Autocompletion
+Plug('neoclide/coc.nvim', { branch = 'release' })
+
+  -- Emmet
+Plug('mattn/emmet-vim')
 
   -- Tab system
 Plug('akinsho/bufferline.nvim', { tag = 'v2.*' })
@@ -93,6 +108,13 @@ require('catppuccin').setup {
 
 vim.g.catppuccin_flavour = "latte" -- latte, frappe, macchiato, mocha
 vim.cmd[[colorscheme catppuccin]]
+
+-- Coc config
+inoremap('<c-space>', 'coc#refresh()', 'silent', 'expr')
+inoremap('<TAB>', 'coc#pum#visible() ? coc#pum#next(1) : CheckBackspace() ? "<Tab>" : coc#refresh()', 'silent', 'expr')
+
+-- Emmet Config
+vim.g.user_emmet_leader_key = '<C-S-Y>'
 
 -- Clear command line after type
 vim.api.nvim_exec('autocmd CursorHold * echon \'\'', true)
