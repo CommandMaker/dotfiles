@@ -3,8 +3,12 @@ set TERM "xterm-256color"
 set EDITOR "micro"
 set VISUAL "kate"
 
+#set UID (id -u)
+
 ## Source .profile to apply its values
 source ~/.profile
+
+source /usr/share/doc/find-the-command/ftc.fish askfirst
 
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
