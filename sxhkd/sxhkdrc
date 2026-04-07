@@ -31,7 +31,7 @@ super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + shift + q
+super + shift + a
 	bspc node -c
 
 # alternate between the tiled and monocle layout
@@ -156,5 +156,8 @@ XF86AudioPrev
 
 XF86AudioStop
 	playerctl stop
+
+Print:
+	flameshot gui
 
 # vim: set noexpandtab:
